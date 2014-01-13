@@ -11,6 +11,8 @@ $(document).ready(function() {
 			// Note that because we specify 'json', jQuery will automatically parse the response
 			// and the argument 'data' becomes a Javascript object instead of a simple string
 			if (data.success) {
+				$('#name').val('');
+				$('#new-msg').val('');
 				var item = $('<li />').html('<span class="name">' + data.name + '</span>: ' + data.message + '</li>');
 				$('#messages').prepend(item);
 			}
